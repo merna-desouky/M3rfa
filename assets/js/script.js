@@ -43,6 +43,7 @@ var swiper = new Swiper(".courses-swiper", {
     },
   },
 });
+
 $(document).ready(function () {
   $(".various").fancybox({
     maxWidth: 800,
@@ -54,3 +55,51 @@ $(document).ready(function () {
     // closeEffect: "none",
   });
 });
+
+window.addEventListener("load", function () {
+  var input = document.querySelector(".country");
+  window.intlTelInput(input, {
+    separateDialCode: true,
+  });
+});
+
+document.getElementById("button").addEventListener("click", function () {
+  const input = document.getElementById("input");
+  const popover = document.getElementById("popover");
+
+  const textToCopy = input.value;
+
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      popover.style.display = "block";
+
+      setTimeout(() => {
+        popover.style.display = "none";
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error("فشل نسخ النص: ", error);
+    });
+});
+// function move() {
+//   var elem = document.getElementById("myBar");
+//   var label = document.getElementById("demo");
+//   var width = 20;
+//   var id = setInterval(frame, 10);
+
+//   function frame() {
+//     if (width >= 100) {
+//       clearInterval(id);
+//     } else {
+//       width++;
+//       elem.style.width = width + "%";
+//       if (document.dir == "rtl") {
+//         label.style.right = width - 60 + "%";
+//       } else {
+//         label.style.left = width - 60 + "%";
+//       }
+//       label.innerHTML = width * 1 + "%";
+//     }
+//   }
+// }

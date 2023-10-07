@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/imgs/logo.svg" />
+
+    <title>معرفة</title>
+    <!-- bootstrap style -->
+    <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+            integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.rtl.min.css"
+      integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.css"
+      integrity="sha512-xXQQj99PFpHikerkvc6HrA+dFLC14dMyBh0eL8fCan9h3n8Uhxvq5Os8ysEvn3oTLWJTte9kl5FFEftf2KfyHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+      integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css?v=123" />
+  </head>
+  <body>
+    <!-- start of header -->
+    <section class="devolum-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="devolum-appbar">
+              <div class="pages">
+                <a class="logo-img light" href="../index.html">
+                  <img
+                    src="../assets/imgs/logo.svg"
+                    class="img-fluid"
+                    alt="logo"
+                  /> </a
+                ><a class="logo-img dark" href="index.html">
+                  <img
+                    src="../assets/imgs/dark-logo.svg"
+                    class="img-fluid"
+                    alt="logo"
+                  />
+                </a>
+                <ul>
+                  <li><a href="../index.html">الرئيسية</a></li>
+                  <li><a href="courses.html" class="active">الكورسات</a></li>
+                  <li><a href="prices.html">الباقات</a></li>
+                </ul>
+              </div>
+              <div class="settings">
+                <a class="account" href="profile.html">
+                  <div class="acc-img">
+                    <img
+                      src="../assets/imgs/acc.png"
+                      alt="account"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="acc-info">
+                    <div>Ahmed Mohamed</div>
+                    <span>example40@gmail.com</span>
+                  </div>
+                </a>
+                <hr />
+                <div class="btns">
+                  <button class="dark-mode">
+                    <label class="toggle-wrap"
+                      ><input
+                        type="checkbox"
+                        class="toggle-switch"
+                        id="checkbox" />
+                      <span class="toggle">
+                        <img
+                          src="../assets/imgs/moon.svg"
+                          alt="moon"
+                          class="moon img-fluid"
+                        />
+                        <img
+                          src="../assets/imgs/sun.svg"
+                          alt="sun"
+                          class="sun img-fluid"
+                        />
+                      </span>
+                      <span class="background"></span
+                    ></label>
+                  </button>
+                  <button class="search">
+                    <img
+                      src="../assets/imgs/search.svg"
+                      alt="search"
+                      class="img-fluid"
+                    />
+                  </button>
+                  <button class="lang">
+                    <img
+                      src="../assets/imgs/flag.svg"
+                      alt="flag"
+                      class="img-fluid"
+                    />
+                  </button>
+                </div>
+                <span onclick="openNav()" class="mob-menu"
+                  ><i class="fa-solid fa-bars"></i
+                ></span>
+              </div>
+            </div>
+            <div class="intro">
+              <div class="row gy-5">
+                <div class="col-12">
+                  <div class="single-headline">
+                    <div class="badge">التسويق العقاري</div>
+                    <h3>اللغة الإنجليزية المستوى الثاني</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="mySidenav" class="sidenav" style="transform: translateX(100%)">
+      <div class="topbar">
+        <a class="mylogo" href="../index.html">
+          <img
+            src="../assets/imgs/logo.svg"
+            alt="logo"
+            class="img-fluid"
+            loading="lazy"
+          />
+        </a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          ><i class="fa-solid fa-xmark"></i
+        ></a>
+      </div>
+
+      <div class="links">
+        <div class="search-mob">
+          <input type="search" placeholder="ابحث" />
+          <img
+            src="../assets/imgs/search.svg"
+            alt="search"
+            class="search-img img-fluid"
+          />
+        </div>
+        <ul class="list-unstyled ps-0">
+          <li><a href="../index.html" class="active">الرئيسية</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="prices.html">الباقات</a></li>
+        </ul>
+        <a href="../auth/sign-up.html"
+          ><div class="auth-btn">
+            <div class="icon">
+              <img
+                src="../assets/imgs/person.svg"
+                alt="person"
+                class="img-fluid"
+              />
+            </div>
+            إنشاء حساب
+          </div></a
+        >
+        <a href="../auth/sign-in.html"
+          ><div class="auth-btn">تسجيل الدخول</div></a
+        >
+      </div>
+    </div>
+    <!-- end of header -->
+    <section class="devolum-certificate">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-sm-12">
+            <div class="certificate-img">
+              <img
+                src="../assets/imgs/certificate.png"
+                alt="certificate"
+                class="img-fluid"
+              />
+            </div>
+            <div class="certificate-btns">
+              <a href="#">
+                <button class="mybtn download">
+                  <div class="myimg">
+                    <img
+                      src="../assets/imgs/download.svg"
+                      alt="download"
+                      class="img-fluid"
+                    />
+                  </div>
+                  تحميل الشهادة
+                </button></a
+              >
+              <button
+                class="mybtn share"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <div class="myimg">
+                  <img
+                    src="../assets/imgs/share.svg"
+                    alt="share"
+                    class="img-fluid"
+                  />
+                </div>
+                شارك الشهادة
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade share-modal"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="modal-title">
+                        <div>شارك الشهادة من خلال :</div>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <!-- AddToAny BEGIN -->
+                      <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_whatsapp"></a>
+                        <a class="a2a_button_linkedin"></a>
+                      </div>
+                      <!-- AddToAny END -->
+                      <div class="copy">
+                        <input id="input" value="https://google.com" />
+                        <button id="button">
+                          <div class="icon">
+                            <img
+                              src="../assets/imgs/copy.svg"
+                              alt="copy"
+                              class="img-fluid"
+                            />
+                          </div>
+                          نسخ
+                        </button>
+                        <!-- Popover element -->
+                        <div id="popover" class="popover">
+                          successfully copied
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- start of footer -->
+    <div class="devolum-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer">
+              <a class="logo-img light" href="index.html">
+                <img
+                  src="../assets/imgs/logo-footer.svg"
+                  class="img-fluid"
+                  alt="logo"
+                /> </a
+              ><a class="logo-img dark" href="index.html">
+                <img
+                  src="../assets/imgs/footer-dark-logo.png"
+                  class="img-fluid"
+                  alt="logo"
+                />
+              </a>
+              <span
+                >اشتراك دورات معتمدة كورسات عالية التخصص طبقا لإحتياجات سوق
+                العمل المحلي والإقليمي</span
+              >
+              <ul>
+                <li><a href="../index.html" class="active">الرئيسية</a></li>
+                <li><a href="courses.html">الكورسات</a></li>
+                <li><a href="prices.html">الباقات</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-rights">
+        جميع الحقوق محفوظة لـ <span>معرفة</span> @2023
+      </div>
+    </div>
+    <!-- end of footer -->
+
+    <!-- js for bootstrap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- js for bootstrap -->
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"
+      integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

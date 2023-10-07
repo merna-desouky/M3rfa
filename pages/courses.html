@@ -37,6 +37,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+      integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="../assets/css/style.css?v=123" />
   </head>
@@ -48,9 +55,15 @@
           <div class="col-12">
             <div class="devolum-appbar">
               <div class="pages">
-                <a class="logo-img" href="../index.html">
+                <a class="logo-img light" href="../index.html">
                   <img
                     src="../assets/imgs/logo.svg"
+                    class="img-fluid"
+                    alt="logo"
+                  /> </a
+                ><a class="logo-img dark" href="index.html">
+                  <img
+                    src="../assets/imgs/dark-logo.svg"
                     class="img-fluid"
                     alt="logo"
                   />
@@ -62,7 +75,7 @@
                 </ul>
               </div>
               <div class="settings">
-                <a href="../auth/sign-up.html"
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal2"
                   ><div class="auth-btn">
                     <div class="icon">
                       <img
@@ -74,9 +87,254 @@
                     إنشاء حساب
                   </div></a
                 >
-                <a href="../auth/sign-in.html"
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal"
                   ><div class="auth-btn">تسجيل الدخول</div></a
                 >
+                <!-- Modal -->
+                <div
+                  class="modal fade modal-auth"
+                  id="exampleModal2"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <button
+                        type="button"
+                        class="cancel-auth"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img
+                          src="../assets/imgs/cancel.png"
+                          alt="cancel"
+                          class="img-fluid"
+                        />
+                      </button>
+                      <div class="modal-body">
+                        <div class="devolum-auth">
+                          <div class="auth-card">
+                            <form>
+                              <div class="title-auth">
+                                إنشاء <span> حساب جديد</span>
+                              </div>
+                              <div class="myinput">
+                                <label for="name">الاسم بالكامل</label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon3"
+                                      ><img
+                                        src="../assets/imgs/person.svg"
+                                        alt="person"
+                                        class="img-fluid"
+                                    /></span>
+                                  </div>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="basic-url"
+                                    aria-describedby="basic-addon3"
+                                    placeholder="ادخل الاسم بالكامل"
+                                  />
+                                </div>
+                              </div>
+                              <div class="myinput">
+                                <label for="name">البريد الإلكتروني </label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon3"
+                                      ><img
+                                        src="../assets/imgs/email-auth.svg"
+                                        alt="person"
+                                        class="img-fluid"
+                                    /></span>
+                                  </div>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="basic-url"
+                                    aria-describedby="basic-addon3"
+                                    placeholder="ادخل البريد الإلكتروني "
+                                  />
+                                </div>
+                              </div>
+                              <div class="myinput">
+                                <label for="name">كلمة المرور </label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon3"
+                                      ><img
+                                        src="../assets/imgs/pass.svg"
+                                        alt="person"
+                                        class="img-fluid"
+                                    /></span>
+                                  </div>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="basic-url"
+                                    aria-describedby="basic-addon3"
+                                    placeholder=" ادخل كلمة المرور "
+                                  />
+                                </div>
+                                <div class="reveal-pass">
+                                  <img
+                                    src="../assets/imgs/eye.svg"
+                                    alt="eye"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                              </div>
+                              <a href="#">
+                                <div class="mybtn">تسجيل الدخول</div></a
+                              >
+                              <div class="sign-with">
+                                <span>سجل من خلال:</span>
+                                <div class="apps">
+                                  <img
+                                    src="../assets/imgs/facebook.png"
+                                    alt="facebook"
+                                    class="img-fluid"
+                                  /><img
+                                    src="../assets/imgs/gmail.png"
+                                    alt="gmail"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                              </div>
+                              <div class="no-account">
+                                ليس لديك حساب؟
+                                <a href="#"> أنشأ حساب جديد </a>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div
+                  class="modal fade modal-auth"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <button
+                        type="button"
+                        class="cancel-auth"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img
+                          src="../assets/imgs/cancel.png"
+                          alt="cancel"
+                          class="img-fluid"
+                        />
+                      </button>
+                      <div class="modal-body">
+                        <div class="devolum-auth">
+                          <div class="auth-card">
+                            <form>
+                              <div class="title-auth">
+                                تسجيل <span> الدخول </span>
+                              </div>
+
+                              <div class="myinput">
+                                <label for="name">البريد الإلكتروني </label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon3"
+                                      ><img
+                                        src="../assets/imgs/email-auth.svg"
+                                        alt="person"
+                                        class="img-fluid"
+                                    /></span>
+                                  </div>
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    id="basic-url"
+                                    aria-describedby="basic-addon3"
+                                    placeholder="ادخل البريد الإلكتروني "
+                                  />
+                                </div>
+                              </div>
+                              <div class="myinput">
+                                <label for="name">كلمة المرور </label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon3"
+                                      ><img
+                                        src="../assets/imgs/pass.svg"
+                                        alt="person"
+                                        class="img-fluid"
+                                    /></span>
+                                  </div>
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="basic-url"
+                                    aria-describedby="basic-addon3"
+                                    placeholder=" ادخل كلمة المرور "
+                                  />
+                                </div>
+                                <div class="reveal-pass">
+                                  <img
+                                    src="../assets/imgs/eye.svg"
+                                    alt="eye"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                                <a
+                                  href="../auth/forget-pass.html"
+                                  class="forget-pass-btn"
+                                  >هل نسيت كلمة المرور؟</a
+                                >
+                              </div>
+
+                              <a href="#">
+                                <div class="mybtn">تسجيل الدخول</div></a
+                              >
+                              <div class="sign-with">
+                                <span>سجل من خلال:</span>
+                                <div class="apps">
+                                  <img
+                                    src="../assets/imgs/facebook.png"
+                                    alt="facebook"
+                                    class="img-fluid"
+                                  /><img
+                                    src="../assets/imgs/gmail.png"
+                                    alt="gmail"
+                                    class="img-fluid"
+                                  />
+                                </div>
+                              </div>
+                              <div class="no-account">
+                                ليس لديك حساب؟
+                                <a href="sign-up.html"> أنشأ حساب جديد </a>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <hr />
                 <div class="btns">
                   <button class="dark-mode">
@@ -622,9 +880,15 @@
         <div class="row">
           <div class="col-12">
             <div class="footer">
-              <a class="logo-img" href="index.html">
+              <a class="logo-img light" href="index.html">
                 <img
                   src="../assets/imgs/logo-footer.svg"
+                  class="img-fluid"
+                  alt="logo"
+                /> </a
+              ><a class="logo-img dark" href="index.html">
+                <img
+                  src="../assets/imgs/footer-dark-logo.png"
                   class="img-fluid"
                   alt="logo"
                 />
@@ -664,7 +928,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="../assets/js/script.js"></script>
   </body>
 </html>

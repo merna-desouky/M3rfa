@@ -38,12 +38,18 @@
       referrerpolicy="no-referrer"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css"
+      rel="stylesheet"
+    />
+
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
       integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="../assets/css/style.css?v=123" />
   </head>
   <body>
@@ -74,21 +80,19 @@
                 </ul>
               </div>
               <div class="settings">
-                <a href="../auth/sign-up.html"
-                  ><div class="auth-btn">
-                    <div class="icon">
-                      <img
-                        src="../assets/imgs/person.svg"
-                        alt="person"
-                        class="img-fluid"
-                      />
-                    </div>
-                    إنشاء حساب
-                  </div></a
-                >
-                <a href="../auth/sign-in.html"
-                  ><div class="auth-btn">تسجيل الدخول</div></a
-                >
+                <a class="account" href="profile.html">
+                  <div class="acc-img">
+                    <img
+                      src="../assets/imgs/acc.png"
+                      alt="account"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="acc-info">
+                    <div>Ahmed Mohamed</div>
+                    <span>example40@gmail.com</span>
+                  </div>
+                </a>
                 <hr />
                 <div class="btns">
                   <button class="dark-mode">
@@ -136,7 +140,7 @@
               <div class="row gy-5">
                 <div class="col-12">
                   <div class="page-headline">
-                    <h3>الباقات</h3>
+                    <h3>الحساب الشخصي</h3>
                     <!-- start of bread crumb -->
                     <div class="devolum-breadcrumb">
                       <div class="container-fluid">
@@ -148,13 +152,13 @@
                                   <a href="#">الرئيسية</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                  <a href="#">الباقات</a>
+                                  <a href="#">الحساب الشخصي</a>
                                 </li>
                                 <li
                                   class="breadcrumb-item active"
                                   aria-current="page"
                                 >
-                                  عملية الدفع
+                                  إعدادات الحساب
                                 </li>
                               </ol>
                             </div>
@@ -220,189 +224,147 @@
     </div>
     <!-- end of header -->
 
-    <!-- start of prices -->
-    <div class="devolum-payment">
+    <section class="devolum-profile">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="row">
-              <div class="col-md-7">
-                <div class="payment">
-                  <div class="payment-title">تفاصيل الدفع</div>
+        <div class="row gy-5">
+          <div class="col-md-3">
+            <div class="profile-settings">
+              <div class="setting-title">إعدادات الحساب</div>
+              <a class="setting-card active" href="profile.html">
+                <div class="img">
+                  <img
+                    src="../assets/imgs/person.svg"
+                    alt="profile"
+                    class="img-fluid"
+                  />
+                </div>
+                إعدادات الحساب
+              </a>
+              <a class="setting-card" href="password.html">
+                <div class="img">
+                  <img
+                    src="../assets/imgs/pass.svg"
+                    alt="profile"
+                    class="img-fluid"
+                  />
+                </div>
+                كلمة المرور
+              </a>
 
-                  <div class="coupon">
-                    <label for="coupon"> كوبون الخصم</label>
-                    <div class="coupon-input">
+              <a class="setting-card" href="favourite.html">
+                <div class="img">
+                  <img
+                    src="../assets/imgs/fav.svg "
+                    alt="profile"
+                    class="img-fluid"
+                  />
+                </div>
+                الـمفضلات
+              </a>
+              <a class="setting-card" href="profile-payments.html">
+                <div class="img">
+                  <img
+                    src="../assets/imgs/payments.svg "
+                    alt="profile"
+                    class="img-fluid"
+                  />
+                </div>
+                المدفوعات
+              </a>
+              <a class="sign-out" href="#">حذف الحساب </a>
+              <a class="sign-out" href="#">تسجيل خروج </a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="settings-content">
+              <div class="title">إعدادات الحساب</div>
+              <div class="profile-img">
+                <img
+                  src="../assets/imgs/man.png"
+                  alt="man"
+                  class="profile img-fluid"
+                />
+                <img
+                  src="../assets/imgs/cam.svg"
+                  alt="cam"
+                  class="cam img-fluid"
+                />
+              </div>
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <div class="myinput">
+                    <label for="name">الاسم بالكامل</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3"
+                          ><img
+                            src="../assets/imgs/person.svg"
+                            alt="person"
+                            class="img-fluid"
+                        /></span>
+                      </div>
                       <input
                         type="text"
                         class="form-control"
-                        id="coupon"
-                        aria-describedby="emailHelp"
-                        placeholder="ادخل كود الخصم"
+                        id="basic-url"
+                        aria-describedby="basic-addon3"
+                        placeholder="ادخل الاسم بالكامل"
                       />
-                      <a href="#"> <div class="cancel-btn">إلغاء</div></a>
                     </div>
                   </div>
-
-                  <div class="methods">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        فورى
-                      </label>
-                    </div>
-
-                    <div class="mygroup">
-                      <label for="basic-url" class="form-label"
-                        >رقم التليفون
-                      </label>
-                      <div class="input-group">
-                        <span class="input-group-text" id="basic-addon3">
-                          <img
-                            src="../assets/imgs/phone.png"
-                            alt="phone"
+                </div>
+                <div class="col-md-6">
+                  <div class="myinput">
+                    <label for="name">البريد الإلكتروني </label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3"
+                          ><img
+                            src="../assets/imgs/email-auth.svg"
+                            alt="person"
                             class="img-fluid"
                         /></span>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="basic-url"
-                          aria-describedby="basic-addon3"
-                          placeholder="ادخل رقم التليفون"
-                        />
                       </div>
-                    </div>
-
-                    <div class="form-check">
                       <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                        checked
+                        type="text"
+                        class="form-control"
+                        id="basic-url"
+                        aria-describedby="basic-addon3"
+                        placeholder="ادخل البريد الإلكتروني "
                       />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        فوادفون كاش
-                      </label>
                     </div>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <div class="mybtn">إتمام عملية الدفع</div>
-                </button>
-                <!-- Modal -->
-                <div
-                  class="modal fade"
-                  id="exampleModal"
-                  tabindex="-1"
-                  aria-labelledby="exampleModalLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <div class="done-img">
-                          <img
-                            src="../assets/imgs/correctIcon.png"
-                            alt="correct"
+                <div class="col-md-6">
+                  <div class="myinput">
+                    <label for="name"> رقم الجوال </label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3"
+                          ><img
+                            src="../assets/imgs/phone.png"
+                            alt="person"
                             class="img-fluid"
-                          />
-                        </div>
-                        <div class="done-text">تم استكمال طلبك بنجاح</div>
-                        <span
-                          >لقد تم تسجيلك بنجاح في الباقة الشهرية يمكنك البدء
-                          الآن
-                        </span>
-                        <a href="#"
-                          ><div class="mybtn">ابدأ التعلم الآن</div></a
-                        >
+                        /></span>
                       </div>
+                      <input
+                        type="phone"
+                        class="form-control country"
+                        id="basic-url"
+                        name="phone"
+                        aria-describedby="basic-addon3"
+                        placeholder="ادخل رقم الهاتف "
+                      />
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="price-card">
-                  <div class="price-img">
-                    <img
-                      src="../assets/imgs/price2.png"
-                      alt="price"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="content">
-                    <div class="price">
-                      <span>باقة شهرية</span>
-                      <div>$100</div>
-                    </div>
-                    <span class="definition"
-                      >هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد
-                      تم توليد هذا النص.</span
-                    >
-
-                    <ul>
-                      <li>
-                        <div class="correct">
-                          <img
-                            src="../assets/imgs/correct.svg"
-                            alt="correct"
-                            class="img-fluid"
-                          />
-                        </div>
-                        إمكانية تخصيص البريد المرسل بهوية المتجر
-                      </li>
-                      <li>
-                        <div class="correct">
-                          <img
-                            src="../assets/imgs/correct.svg"
-                            alt="correct"
-                            class="img-fluid"
-                          />
-                        </div>
-                        دعم فني مباشر
-                      </li>
-                      <li>
-                        <div class="correct">
-                          <img
-                            src="../assets/imgs/correct.svg"
-                            alt="correct"
-                            class="img-fluid"
-                          />
-                        </div>
-                        دعم فني مباشر
-                      </li>
-                      <li>
-                        <div class="correct">
-                          <img
-                            src="../assets/imgs/correct.svg"
-                            alt="correct"
-                            class="img-fluid"
-                          />
-                        </div>
-                        تقارير و احصائيات الوصول
-                      </li>
-                    </ul>
-
-                    <a href="#"><div class="mybtn">اشترك الآن</div></a>
                   </div>
                 </div>
               </div>
             </div>
+            <a href="#"> <div class="mybtn">حفظ</div></a>
           </div>
         </div>
       </div>
-    </div>
-    <!-- end of prices -->
-
+    </section>
     <!-- start of footer -->
     <div class="devolum-footer">
       <div class="container-fluid">
@@ -463,6 +425,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"

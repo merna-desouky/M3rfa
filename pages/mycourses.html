@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/imgs/logo.svg" />
+
+    <title>معرفة</title>
+    <!-- bootstrap style -->
+    <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+            integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.rtl.min.css"
+      integrity="sha512-wO8UDakauoJxzvyadv1Fm/9x/9nsaNyoTmtsv7vt3/xGsug25X7fCUWEyBh1kop5fLjlcrK3GMVg8V+unYmrVA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.css"
+      integrity="sha512-xXQQj99PFpHikerkvc6HrA+dFLC14dMyBh0eL8fCan9h3n8Uhxvq5Os8ysEvn3oTLWJTte9kl5FFEftf2KfyHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+      integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css?v=123" />
+  </head>
+  <body>
+    <!-- start of header -->
+    <section class="devolum-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="devolum-appbar">
+              <div class="pages">
+                <a class="logo-img light" href="../index.html">
+                  <img
+                    src="../assets/imgs/logo.svg"
+                    class="img-fluid"
+                    alt="logo"
+                  /> </a
+                ><a class="logo-img dark" href="index.html">
+                  <img
+                    src="../assets/imgs/dark-logo.svg"
+                    class="img-fluid"
+                    alt="logo"
+                  />
+                </a>
+                <ul>
+                  <li><a href="../index.html">الرئيسية</a></li>
+                  <li><a href="courses.html" class="active">الكورسات</a></li>
+                  <li><a href="prices.html">الباقات</a></li>
+                </ul>
+              </div>
+              <div class="settings">
+                <a class="account" href="profile.html">
+                  <div class="acc-img">
+                    <img
+                      src="../assets/imgs/acc.png"
+                      alt="account"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="acc-info">
+                    <div>Ahmed Mohamed</div>
+                    <span>example40@gmail.com</span>
+                  </div>
+                </a>
+                <hr />
+                <div class="btns">
+                  <button class="dark-mode">
+                    <label class="toggle-wrap"
+                      ><input
+                        type="checkbox"
+                        class="toggle-switch"
+                        id="checkbox" />
+                      <span class="toggle">
+                        <img
+                          src="../assets/imgs/moon.svg"
+                          alt="moon"
+                          class="moon img-fluid"
+                        />
+                        <img
+                          src="../assets/imgs/sun.svg"
+                          alt="sun"
+                          class="sun img-fluid"
+                        />
+                      </span>
+                      <span class="background"></span
+                    ></label>
+                  </button>
+                  <button class="search">
+                    <img
+                      src="../assets/imgs/search.svg"
+                      alt="search"
+                      class="img-fluid"
+                    />
+                  </button>
+                  <button class="lang">
+                    <img
+                      src="../assets/imgs/flag.svg"
+                      alt="flag"
+                      class="img-fluid"
+                    />
+                  </button>
+                </div>
+                <span onclick="openNav()" class="mob-menu"
+                  ><i class="fa-solid fa-bars"></i
+                ></span>
+              </div>
+            </div>
+            <div class="intro">
+              <div class="row gy-5">
+                <div class="col-12">
+                  <div class="page-headline">
+                    <h3>كورساتي</h3>
+                    <!-- start of bread crumb -->
+                    <div class="devolum-breadcrumb">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="mybreadcrumb">
+                              <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                  <a href="#">الرئيسية</a>
+                                </li>
+
+                                <li
+                                  class="breadcrumb-item active"
+                                  aria-current="page"
+                                >
+                                  كورساتي
+                                </li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of bread crumb -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="mySidenav" class="sidenav" style="transform: translateX(100%)">
+      <div class="topbar">
+        <a class="mylogo" href="../index.html">
+          <img
+            src="../assets/imgs/logo.svg"
+            alt="logo"
+            class="img-fluid"
+            loading="lazy"
+          />
+        </a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          ><i class="fa-solid fa-xmark"></i
+        ></a>
+      </div>
+
+      <div class="links">
+        <div class="search-mob">
+          <input type="search" placeholder="ابحث" />
+          <img
+            src="../assets/imgs/search.svg"
+            alt="search"
+            class="search-img img-fluid"
+          />
+        </div>
+        <ul class="list-unstyled ps-0">
+          <li><a href="../index.html" class="active">الرئيسية</a></li>
+          <li><a href="courses.html">الكورسات</a></li>
+          <li><a href="prices.html">الباقات</a></li>
+        </ul>
+        <a href="../auth/sign-up.html"
+          ><div class="auth-btn">
+            <div class="icon">
+              <img
+                src="../assets/imgs/person.svg"
+                alt="person"
+                class="img-fluid"
+              />
+            </div>
+            إنشاء حساب
+          </div></a
+        >
+        <a href="../auth/sign-in.html"
+          ><div class="auth-btn">تسجيل الدخول</div></a
+        >
+      </div>
+    </div>
+    <!-- end of header -->
+
+    <div class="devolum-mycourses">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  الكورسات قيد التنفيذ
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  الكورسات الـمكتملة
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+              >
+                <div class="mycourses">
+                  <div class="row gy-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                <div class="mycourses">
+                  <div class="row gy-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                      <a class="course-card" href="single-mycourse.html">
+                        <div class="course-img">
+                          <img
+                            src="../assets/imgs/course.png"
+                            alt="course"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="description">
+                          <div class="course-name">
+                            اللغة الإنجليزية المستوى الثاني
+                          </div>
+                          <div class="progress-bar">
+                            <div class="progress-container">
+                              <div id="myBarContainer">
+                                <div id="myBar"></div>
+                              </div>
+                              <p id="demo">40%</p>
+                            </div>
+                          </div>
+                          <div class="author">
+                            <div class="name">
+                              <div class="img">
+                                <img
+                                  src="../assets/imgs/avi.png"
+                                  class="img-fluid"
+                                  alt="avatar"
+                                />
+                              </div>
+                              هشام الحلبي
+                            </div>
+                            <div class="duration">
+                              <div class="clock-img">
+                                <img
+                                  src="../assets/imgs/clock.svg"
+                                  alt="clock"
+                                  class="img-fluid"
+                                />
+                              </div>
+                              4 ساعات
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- start of footer -->
+    <div class="devolum-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer">
+              <a class="logo-img light" href="index.html">
+                <img
+                  src="../assets/imgs/logo-footer.svg"
+                  class="img-fluid"
+                  alt="logo"
+                /> </a
+              ><a class="logo-img dark" href="index.html">
+                <img
+                  src="../assets/imgs/footer-dark-logo.png"
+                  class="img-fluid"
+                  alt="logo"
+                />
+              </a>
+              <span
+                >اشتراك دورات معتمدة كورسات عالية التخصص طبقا لإحتياجات سوق
+                العمل المحلي والإقليمي</span
+              >
+              <ul>
+                <li><a href="../index.html" class="active">الرئيسية</a></li>
+                <li><a href="courses.html">الكورسات</a></li>
+                <li><a href="prices.html">الباقات</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-rights">
+        جميع الحقوق محفوظة لـ <span>معرفة</span> @2023
+      </div>
+    </div>
+    <!-- end of footer -->
+
+    <!-- js for bootstrap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- js for bootstrap -->
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"
+      integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
